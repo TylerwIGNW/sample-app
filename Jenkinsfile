@@ -36,6 +36,7 @@ spec:
 """
 }
   }
+}
   stages {
     stage('Test') {
       steps {
