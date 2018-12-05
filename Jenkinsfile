@@ -35,8 +35,7 @@ spec:
     tty: true
 """
 }
-  }
-
+}
   stages {
     stage('Test') {
       steps {
@@ -103,5 +102,4 @@ spec:
       }     
     }
   }
-}
 }
