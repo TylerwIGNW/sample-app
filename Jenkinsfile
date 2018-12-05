@@ -1,4 +1,4 @@
-def project = 'ignw-internal-tools'
+def project = 'REPLACE_WITH_YOUR_PROJECT_ID'
 def  appName = 'gceme'
 def  feSvcName = "${appName}-frontend"
 def  imageTag = "gcr.io/${project}/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
@@ -35,7 +35,7 @@ spec:
     tty: true
 """
 }
-}
+  }
   stages {
     stage('Test') {
       steps {
@@ -45,11 +45,9 @@ spec:
             cd /go/src/sample-app
             go test
           """
-        
         }
       }
-		}
-
+    }
     stage('Build and push image with Container Builder') {
       steps {
         container('gcloud') {
